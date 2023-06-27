@@ -1,0 +1,17 @@
+"C:\Users\Daniluxa\Practice\IAR\arm\bin\armproc.dll" 
+
+"C:\Users\Daniluxa\Practice\IAR\arm\bin\armstlink2.dll" 
+
+"C:\Users\Daniluxa\Documents\GitHub\test-ble\EWARM\test_ble\Exe\test_ble.out" 
+
+--plugin="C:\Users\Daniluxa\Practice\IAR\arm\bin\armbat.dll" 
+
+--device_macro="C:\Users\Daniluxa\Practice\IAR\arm\config\debugger\ST\STM32WBxx.dmac" 
+
+--device_macro="C:\Users\Daniluxa\Practice\IAR\arm\config\debugger\ST\STM32Wxxx_OB.dmac" 
+
+--flash_loader="C:\Users\Daniluxa\Practice\IAR\arm\config\flashloader\ST\FlashSTM32WB55xG.board" 
+
+
+
+

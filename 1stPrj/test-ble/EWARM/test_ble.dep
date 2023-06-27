@@ -1,0 +1,1719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>2433671241</fileChecksum>
+    <configuration>
+        <name>test_ble</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\Core\Src\hw_uart.c</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\Target\hw_ipcc.c</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\custom_stm.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\app_debug.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_flash.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_hsem.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_pwr.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\system_stm32wbxx.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\hw_timerserver.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_dma_ex.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_cortex.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_exti.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_ipcc.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\stm32wbxx_it.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\stm32_lpm_if.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\app_entry.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\main.c</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\app_ble.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_dma.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_gpio.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_pwr_ex.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\stm32wbxx_hal_msp.c</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\custom_app.c</file>
+            <file>$PROJ_DIR$\startup_stm32wb55xx_cm4.s</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_flash_ex.c</file>
+            <file>$PROJ_DIR$\test_ble\Obj\shci_tl_if.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hw_timerserver.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_flash_ex.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_gap_aci.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_exti.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\custom_app.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rcc.xcl</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\template_stm.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32_lpm_if.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\p2p_stm.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_pwr_ex.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_exti.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_rng.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_uart_ex.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_events.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\app_ble.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_ipcc.h</file>
+            <file>$PROJ_DIR$\..\Core\Inc\hw_conf.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\p2p_server_app.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_it.o</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\ble_conf.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_msp.o</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_dmamux.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\utilities_common.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_rcc.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\ble.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_tim.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_hci_le.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_hci_le.xcl</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32WBxx\Include\system_stm32wbxx.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\dbg_trace.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_hal_aci.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_hci_le.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_tim_ex.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_events.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_gatt_aci.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rng.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rcc_ex.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_ll_rcc.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_l2cap_aci.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\hci_tl.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\hci_tl_if.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\shci_tl_if.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\stm_list.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rcc.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\stm_queue.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\tl_mbox.c</file>
+            <file>$PROJ_DIR$\..\Utilities\lpm\tiny_lpm\stm32_lpm.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rtc_ex.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rtc.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_gap_aci.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\template\osal.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\otp.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_uart.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_uart_ex.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\shci\shci.c</file>
+            <file>$PROJ_DIR$\..\Utilities\sequencer\stm32_seq.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\shci_tl.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_tim.c</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_flash.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Src\svc_ctl.c</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\dis.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_hsem.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\stm_list.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm_list.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_flash_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\shci_tl.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_flash.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_flash.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\main.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_ll_rcc.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_l2cap_aci.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_dma.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_hsem.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_ll_rcc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32WBxx\Include\stm32wbxx.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_dma_ex.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_uart_ex.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_uart.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_pwr_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_crs.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_hal_aci.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\shci_tl_if.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32_seq.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\custom_stm.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\app_entry.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\system_stm32wbxx.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rng.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_pwr.o</file>
+            <file>$PROJ_DIR$\..\Utilities\lpm\tiny_lpm\stm32_lpm.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_rtc_ex.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_uart.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_ipcc.o</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\mpu_armv7.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_rtc.h</file>
+            <file>$PROJ_DIR$\test_ble\Exe\test_ble.out</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\bls.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hci_tl.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_uart.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\shci_tl.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rtc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\hrs.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_tim.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\shci.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\test_ble.pbd</file>
+            <file>$PROJ_DIR$\..\Core\Inc\utilities_conf.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\osal.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\shci\shci.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_dma_ex.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\hci_tl.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\ble_bufsize.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_msp.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\otp.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_gap_aci.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm_list.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\template\ble_const.h</file>
+            <file>$PROJ_DIR$\..\Core\Inc\app_conf.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_hsem.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_cortex.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_ipcc.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_uart_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\otas_stm.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_flash_ex.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hw_uart.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\tl.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\otp.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_hal_aci.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\system_stm32wbxx.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32_lpm.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_it.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_tim_ex.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32_lpm_if.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\app_ble.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hw_ipcc.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\app_debug.xcl</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Src\p2p_stm.c</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_exti.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_dma_ex.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_uart_ex.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32_seq.o</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\p2p_server_app.c</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_uart.xcl</file>
+            <file>$PROJ_DIR$\..\Core\Inc\stm32_lpm_if.h</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cm4.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\tps.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rtc_ex.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_pwr_ex.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\lls.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_utils.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\uuid.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rtc.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\app_entry.xcl</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\template\osal.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32_seq.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\shci.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\custom_stm.__cstat.et</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\custom_app.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm_queue.xcl</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_exti.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_cortex.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_flash.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\hts.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_cortex.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32_lpm_if.o</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_dma.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\otp.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_hsem.h</file>
+            <file>$PROJ_DIR$\..\Core\Inc\stm32wbxx_hal_conf.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\bas.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_dma_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hw_ipcc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_gap_aci.o</file>
+            <file>$PROJ_DIR$\..\Core\Inc\hw_if.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hci_tl.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\p2p_server_app.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\custom_app.xcl</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_rcc.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_ipcc.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_it.xcl</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_gpio.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\p2p_server_app.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\custom_app.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rcc_ex.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\shci_tl_if.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\dbg_trace.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\stm32_wpan_common.h</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\cmsis_version.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\dbg_trace.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\..\Utilities\sequencer\stm32_seq.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_system.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_gpio.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\svc_ctl.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\app_entry.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_tim_ex.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\tl_mbox.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\svc_ctl.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\zdd_stm.h</file>
+            <file>$PROJ_DIR$\test_ble\Exe\test_ble.bin</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_gap_aci.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\ias.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\system_stm32wbxx.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\shci_tl.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\tl_mbox.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\ble_std.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_pwr.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hci_tl.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_hci_le.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_hci_le.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_gpio.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\osal.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\List\test_ble.map</file>
+            <file>$PROJ_DIR$\test_ble\Obj\tl_mbox.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hw_uart.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_pwr.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\svc_ctl.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_dma.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\dbg_trace.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\osal.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rtc.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_gpio.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\mbox_def.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\custom_stm.xcl</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\app_ble.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hw_timerserver.xcl</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\ble_dbg_conf.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\motenv_stm.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_tim_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_tim.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_exti.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_gatt_aci.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\otp.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\startup_stm32wb55xx_cm4.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hw_ipcc.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rcc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_hsem.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\shci_tl.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_ll_rcc.o</file>
+            <file>$PROJ_DIR$\stm32wb55xx_flash_cm4.icf</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_l2cap_aci.h</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\tl_dbg_conf.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_gatt_aci.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_pwr.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\dbg_trace.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\p2p_stm.o</file>
+            <file>$PROJ_DIR$\..\Core\Inc\app_common.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hw_timerserver.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_gatt_aci.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Src\common_blesvc.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\template\compiler.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_rcc_ex.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hci_tl_if.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_dma.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_msp.xcl</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_ipcc.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_events.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm_list.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\app_debug.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\p2p_stm.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\svc_ctl.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\hw.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm_queue.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\hids.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_l2cap_aci.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_dma.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hw_uart.xcl</file>
+            <file>$PROJ_DIR$\..\STM32_WPAN\App\custom_stm.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rng.o</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\ble_core.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_events.xcl</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_gpio_ex.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\eds_stm.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_rtc.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_events.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\ble_common.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_l2cap_aci.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_cortex.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_hal_aci.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\crs_stm.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hci_tl_if.xcl</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_types.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\ble_gatt_aci.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rtc_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Core\Inc\app_entry.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\hci_tl_if.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\p2p_stm.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rng.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\ble_legacy.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rcc_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rcc.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rtc_ex.xcl</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_flash_ex.xcl</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Inc\mesh.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_bus.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_def.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm_queue.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32_lpm.__cstat.et</file>
+            <file>$PROJ_DIR$\test_ble\Obj\p2p_server_app.o</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32_lpm.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_hal_aci.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\test_ble\Obj\stm32wbxx_hal_rcc_ex.o</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\stm_queue.h</file>
+            <file>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\ble_defs.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_ll_cortex.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\app_debug.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\..\Core\Inc\app_debug.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_pwr_ex.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\app_ble.xcl</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32WBxx\Include\stm32wb55xx.h</file>
+            <file>$PROJ_DIR$\..\Core\Inc\main.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Inc\stm32wbxx_hal_pwr.h</file>
+            <file>$PROJ_DIR$\..\Core\Inc\stm32wbxx_it.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\test_ble\Obj\shci.o</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 124 254</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\hw_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 313</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 154</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 256</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 292 342 222 219 365 35 190 211 285 145 229 126 155 247 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32_WPAN\Target\hw_ipcc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 277</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 207</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 166</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 292 342 222 219 365 35 190 211 285 145 229 126 155 247 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 264 226</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32_WPAN\App\custom_stm.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 265</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 191</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 113</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 295 323 342 222 219 365 35 190 211 285 145 229 126 155 247 48 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 269 53 317 246 353 143 329 146 186 296 294 349 55 283 303 336 205 125 327 89 320 310 131 198 242 181 178 270 37 239 152 226 341 34 238 183 228 314 266 139 156</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\app_debug.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 167</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 355</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 305</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 292 342 222 219 365 35 190 211 285 145 229 126 155 247 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 357 51 137 264 226 156 228</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_flash.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 96</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 87</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 95</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_hsem.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 101</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 148</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 90</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_pwr.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 257</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 289</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 117</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\system_stm32wbxx.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 115</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 159</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 243</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 362 204 312 344 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\hw_timerserver.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 267</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 293</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 28</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 292 342 222 219 365 35 190 211 285 145 229 126 155 247 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_dma_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 104</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 206</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 138</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_cortex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 325</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 196</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 149</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_exti.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 273</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 39</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_ipcc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 216</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 150</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 121</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\stm32wbxx_it.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 217</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 161</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 361 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 147 308 45 210 44 354 182 203 232 123 140 332 292 211 145 229 126 155 247 314 329 146 246 353 186 296 266 139 226 156 192 364</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\stm32_lpm_if.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 163</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 36</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 200</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 176 118 342 222 219 365 35 190 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\app_entry.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 185</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 234</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 114</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 292 342 222 219 365 35 190 211 285 145 229 126 155 247 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 361 332 314 329 146 246 353 186 296 266 139 226 156 192 53 48 269 317 143 294 349 55 283 303 336 205 125 327 89 320 310 131 198 242 181 178 270 37 239 152 341 34 238 183 230 244 118 357 228 137 264 202 51</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\main.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 165</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 188</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 97</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 361 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 147 308 45 210 44 354 182 203 232 123 140 332 292 211 145 229 126 155 247 314 329 146 246 353 186 296 266 139 226 156 192</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32_WPAN\App\app_ble.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 359</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 43</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 164</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 361 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 147 308 45 210 44 354 182 203 232 123 140 332 292 211 145 229 126 155 247 314 329 146 246 353 186 296 266 139 226 156 192 228 53 48 269 317 143 294 349 55 283 303 336 205 125 327 89 320 310 131 198 242 181 178 270 37 239 152 341 34 238 183 230 137 264 118 202 51</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 287</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 169</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_dma.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 259</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 299</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 100</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 252</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 108</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 263</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_pwr_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 38</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 107</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 180</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\stm32wbxx_hal_msp.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 301</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 141</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 49</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 361 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 147 308 45 210 44 354 182 203 232 123 140 332 292 211 145 229 126 155 247 314 329 146 246 353 186 296 266 139 226 156 192</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32_WPAN\App\custom_app.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 214</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 221</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 361 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 147 308 45 210 44 354 182 203 232 123 140 332 292 211 145 229 126 155 247 314 329 146 246 353 186 296 266 139 226 156 192 228 53 48 269 317 143 294 349 55 283 303 336 205 125 327 89 320 310 131 198 242 181 178 270 37 239 152 341 34 238 183 230</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_stm32wb55xx_cm4.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 276</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_flash_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 340</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 93</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 29</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\dbg_trace.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 260</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 225</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 290</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 51 342 222 219 365 35 190 211 285 145 229 126 155 247 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 352 228</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_hal_aci.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 158</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 110</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 326</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 349 329 342 222 219 365 35 190 146 211 285 145 246 353 186 296</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_hci_le.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 250</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 251</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 55 329 342 222 219 365 35 190 146 211 285 145 246 353 186 296</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_tim_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 235</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 271</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 162</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_events.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 318</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 322</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 42</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 303 329 342 222 219 365 35 190 146 211 285 145 246 353 186 296</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_gatt_aci.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 274</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 330</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 288</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 294 329 342 222 219 365 35 190 146 211 285 145 246 353 186 296</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rng.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 116</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 335</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 315</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rcc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 223</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 337</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 351</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_ll_rcc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 98</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 102</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 281</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_l2cap_aci.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 324</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 311</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 99</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 329 342 222 219 365 35 190 146 211 285 145 246 353 186 296</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\hci_tl.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 249</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 127</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 212</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 323 342 222 219 365 35 190 211 285 145 229 126 155 247 48 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 269 146 246 353 186 296 91 226 156 139</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\hci_tl_if.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 328</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 298</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 333</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 139 226 342 222 219 365 35 190 211 285 145 229 126 155 247 356 208 236 156</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\shci_tl_if.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 224</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 111</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 26</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 244 156 226 342 222 219 365 35 190 211 285 145 229 126 155 247 356 208 236</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\stm_list.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 144</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 304</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 92</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 51 342 222 219 365 35 190 211 285 145 229 126 155 247 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 91 226</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rcc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 33</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 278</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 338</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\stm_queue.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 193</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 309</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 345</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 51 342 222 219 365 35 190 211 285 145 229 126 155 247 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 352</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\tl_mbox.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 255</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 245</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 237</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 226 342 222 219 365 35 190 211 285 145 229 126 155 247 356 208 236 308 91 156 264 284 147 45 210 103 360 177 227 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 228</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Utilities\lpm\tiny_lpm\stm32_lpm.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 160</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 346</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 348</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 118 342 222 219 365 35 190 135 356 208 236 211 285 145</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rtc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 339</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 331</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 179</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_rtc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 262</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 130</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 184</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\auto\ble_gap_aci.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 241</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 209</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 329 342 222 219 365 35 190 146 211 285 145 246 353 186 296</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\core\template\osal.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 261</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 253</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 136</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 211 222 219 365 35 190 285 145 186</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\utilities\otp.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 157</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 142</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 275</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 51 342 222 219 365 35 190 211 285 145 229 126 155 247 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 202</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 175</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 120</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 106</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_uart_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 41</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 151</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 105</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\shci\shci.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 189</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 133</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 366</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 226 342 222 219 365 35 190 211 285 145 229 126 155 247 356 208 236 244 156 137 264 103 360 177 227 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Utilities\sequencer\stm32_seq.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 112</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 187</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 173</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 230 342 222 219 365 35 190 135 356 208 236 211 285 145</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\interface\patterns\ble_thread\tl\shci_tl.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 129</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 94</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 280</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 226 342 222 219 365 35 190 211 285 145 229 126 155 247 356 208 236 91 244 156</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32WBxx_HAL_Driver\Src\stm32wbxx_hal_tim.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 132</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 272</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 54</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Src\svc_ctl.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 233</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 307</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 258</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 295 323 342 222 219 365 35 190 211 285 145 229 126 155 247 48 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 269 53 317 246 353 143 329 146 186 296 294 349 55 283 303 336 205 125 327 89 320 310 131 198 242 181 178 270 37 239 152 226 341 34 238 183 228</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\test_ble\Exe\test_ble.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 254</file>
+                </tool>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 240</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 282 164 305 114 42 209 288 326 251 99 32 113 290 212 333 166 28 256 97 136 275 366 280 26 276 348 200 173 27 149 100 138 31 95 29 263 90 121 49 117 180 338 351 315 184 179 54 162 106 105 47 281 92 345 258 243 237 350 268 316 194</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Middlewares\ST\STM32_WPAN\ble\svc\Src\p2p_stm.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 306</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 334</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 291</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 295 323 342 222 219 365 35 190 211 285 145 229 126 155 247 48 147 308 45 210 103 360 177 227 356 208 236 122 57 362 204 312 344 286 300 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 44 354 182 203 232 123 140 269 53 317 246 353 143 329 146 186 296 294 349 55 283 303 336 205 125 327 89 320 310 131 198 242 181 178 270 37 239 152 226 341 34 238 183 228</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32_WPAN\App\p2p_server_app.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 213</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 46</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 347</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 361 362 204 312 344 103 360 177 342 222 219 365 35 190 227 356 208 236 122 57 286 300 285 201 50 171 199 170 197 153 218 319 279 302 363 248 195 358 52 215 343 297 109 40 321 119 128 172 231 147 308 45 210 44 354 182 203 232 123 140 332 292 211 145 229 126 155 247 228 53 48 269 317 246 353 143 329 146 186 296 294 349 55 283 303 336 205 125 327 89 320 310 131 198 242 181 178 270 37 239 152 226 341 34 238 183 220 230</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+</project>
