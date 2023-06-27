@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=FMC_SDNE0 Pin=DR9-3
+Removed Pin From Net: NetName=FMC_SDCKE0 Pin=DR9-4
+Removed Pin From Net: NetName=DR9_3 Pin=DR9-5
+Removed Pin From Net: NetName=DR9_2 Pin=DR9-6
+Added Pin To Net: NetName=FMC_SDNE0 Pin=DR9-2
+Added Pin To Net: NetName=FMC_SDCKE0 Pin=DR9-3
+Added Pin To Net: NetName=DR9_3 Pin=DR9-6
+Added Pin To Net: NetName=DR9_2 Pin=DR9-7

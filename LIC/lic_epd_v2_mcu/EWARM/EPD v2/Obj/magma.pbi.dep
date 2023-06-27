@@ -1,0 +1,13 @@
+magma.pbi: \
+  C:\Users\Daniluxa\Documents\GitHub\LIC\lic_epd_v2_mcu\Core\Src\magma.c \
+  C:\Users\Daniluxa\Documents\GitHub\LIC\lic_epd_v2_mcu\EWARM/../Core/Inc\magma.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\stdlib.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\ycheck.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\yvals.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\DLib_Defaults.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\DLib_Config_Full.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\DLib_Product.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\ysizet.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\DLib_Product_stdlib.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\stdint.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\stdio.h

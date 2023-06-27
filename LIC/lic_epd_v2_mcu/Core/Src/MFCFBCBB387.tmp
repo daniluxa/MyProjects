@@ -1,0 +1,535 @@
+#include "sensors.h"
+#include "string.h"
+#include "stdio.h"
+
+extern Cfg_Overall cfg_overall;
+extern Cfg_ethernet cfg_eth;
+//extern ISA_union Isa_LIC_struct;
+extern Isa_LIC isa_lic;
+extern Isa_Settings isa_set;
+extern DG_struct dg_struct;
+
+uint16_t crc16(uint8_t* data, uint16_t num){
+  uint16_t crc = 0xFFFF;
+  uint16_t polynom = 0xA001;
+  uint16_t i = 0;
+  uint16_t j = 0;
+
+  for(i=0;i<num;i++)
+  {
+    crc = crc ^ data[i];
+
+    for(j=0;j<8;j++)
+    {
+      if(crc & 0x0001)
+      {
+        crc = crc >> 1;
+        crc = crc ^ polynom;
+      }
+      else
+      {
+        crc = crc >>1;
+      }
+    }
+  }
+  return(crc);
+}
+
+void RS_TR_SET(UART_HandleTypeDef* huart, bool TR){
+    if (huart == &RS1_huart)
+      HAL_GPIO_WritePin(RS1_TR_GPIO_Port, RS1_TR_Pin, (GPIO_PinState)!TR);
+    else if(huart == &RS2_huart)
+      HAL_GPIO_WritePin(RS2_TR_GPIO_Port, RS2_TR_Pin, (GPIO_PinState)TR);
+    else if(huart == &RS3_huart)
+      HAL_GPIO_WritePin(RS3_TR_GPIO_Port, RS3_TR_Pin, (GPIO_PinState)TR);
+}
+
+void Read_Reg(UART_HandleTypeDef* huart, uint8_t dev_addr, uint8_t Func_Code, uint8_t Register_Hi, uint8_t Register_Lo, uint8_t amount_reg, uint8_t* dataRead, uint8_t data_size)
+{
+    uint16_t crc_calc = 0;
+    uint8_t msg_cmd[8] = {dev_addr, Func_Code, Register_Hi, Register_Lo, 0x00, amount_reg, 0x00, 0x00};
+    crc_calc = crc16(msg_cmd, (sizeof(msg_cmd) - 2));
+    memcpy(&msg_cmd[(sizeof(msg_cmd) - 2)], &crc_calc, sizeof(crc_calc));
+    RS_TR_SET(huart, true);
+    HAL_UART_Transmit(huart, msg_cmd, sizeof(msg_cmd), 1000);
+    RS_TR_SET(huart, false);
+    HAL_StatusTypeDef a = HAL_UART_Receive(huart, dataRead, data_size, 1000);
+}
+
+uint8_t rs_read_EKSIK(UART_HandleTypeDef* huart, uint8_t* buf, uint8_t Sensor_type){
+ 
+  HAL_StatusTypeDef st;
+  float res = 0;
+  uint8_t dev_addr = 0;
+  uint8_t dev_reg = 0;
+  uint16_t crc_calc = 0;
+  uint8_t ans_cmd[9] = {0};
+  switch(Sensor_type){
+    case EKSIK_TEMP:
+          dev_addr = 0x0b;
+          dev_reg = 0;
+          break;
+    case EKSIK_HUM:
+          dev_addr = 0x0c;
+          dev_reg = 2;
+          break;
+    case EKSIK_PRES:
+          dev_addr = 13;
+          dev_reg = 4;
+          break;    
+  }
+
+  uint8_t msg_cmd[8] = {dev_addr, 0x04, 0x00, dev_reg, 0x00, 0x02, 0x00, 0x00};
+  crc_calc = crc16(msg_cmd, 6);
+  memcpy(&msg_cmd[6], &crc_calc, sizeof(crc_calc));
+
+  int i = 0;
+  do
+  {
+    if (i > 2)
+      return 1;
+
+    RS_TR_SET(huart, true);
+    //RS_TR_SET(huart, false);
+    //HAL_HalfDuplex_EnableTransmitter(&RS3_huart);
+    st = HAL_UART_Transmit(huart, msg_cmd, sizeof(msg_cmd), 150);
+    //RS_TR_SET(huart, true);
+    RS_TR_SET(huart, false);
+    //HAL_HalfDuplex_EnableReceiver(&RS3_huart);
+    st = HAL_UART_Receive(huart, ans_cmd, 9/*sizeof(ans_cmd)*/, 150);
+    i++;
+  } while (st != HAL_OK);
+  
+  *(uint32_t*)&res = (uint32_t)ans_cmd[4] | (uint32_t)ans_cmd[3]<< 8 | (uint32_t)ans_cmd[6] << 16 | (uint32_t)ans_cmd[5] << 24;
+  crc_calc = crc16(ans_cmd, 7);
+  if (!((ans_cmd[0] == dev_addr)
+   && (ans_cmd[1] == 0x04)
+   && (ans_cmd[7] == (uint8_t)crc_calc)
+   && (ans_cmd[8] == crc_calc >> 8)))
+    return 2;
+
+  memcpy(buf, &ans_cmd[0], 9);
+  return 0;
+}
+
+uint8_t Read_Data_DG(UART_HandleTypeDef* huart, uint8_t dev_addr){
+    HAL_StatusTypeDef st;  
+    uint8_t k = 0;
+    uint8_t msg_rec[200] = {0};
+    
+    uint16_t crc_calc = 0;
+    uint8_t msg_cmd[8] = {dev_addr, 0x03, 0x00, 0x00, 0x00, 0x6D, 0x00, 0x00};
+    crc_calc = crc16(msg_cmd, (sizeof(msg_cmd) - 2));
+    memcpy(&msg_cmd[(sizeof(msg_cmd) - 2)], &crc_calc, sizeof(crc_calc));
+    int i = 0;
+    do
+    {
+      if (i > 2)
+        return 1;
+
+    RS_TR_SET(huart, true);
+    st = HAL_UART_Transmit(huart, msg_cmd, sizeof(msg_cmd), 1000);
+    RS_TR_SET(huart, false);
+    st = HAL_UART_Receive(huart, msg_rec, sizeof(msg_rec), 1000);
+    i++;
+  } while (st != HAL_OK);
+    
+    //Read_Reg(huart, dev_addr, 0x03, 0x00, 0x00, 0x6D, msg_rec, 200);
+    //(msg_rec[0] == 123 && && msg_rec[1] == 3) ? k = 0 : k = 1;
+    if (msg_rec[0] == 123 && msg_rec[1] == 3) k = 0;
+    else k = 1;
+    dg_struct.Anum = msg_rec[7 + k] + msg_rec[8 + k] * 256 + msg_rec[9 + k] * 256 * 256;
+    dg_struct.PAC_num = msg_rec[11 + k] + msg_rec[12 + k] * 256;
+    for(int i = 0; i < 4; i++){
+      dg_struct.Unit_num[i] = msg_rec[19 + i + k];
+    }
+    for(int i = 0; i < 8; i++){
+      dg_struct.SOFTdata[i] = msg_rec[27 + i + k];
+    }
+    dg_struct.PROBAtimer = msg_rec[44 + k];
+    dg_struct.Mflag = msg_rec[51 + k];
+    dg_struct.T0 = (msg_rec[71 + k] + msg_rec[72 + k] * 256 + msg_rec[73 + k] * 256 * 256 ) / 100;
+    dg_struct.T1 = (msg_rec[87 + k] + msg_rec[88 + k] * 256 + msg_rec[89 + k] * 256 * 256 ) / 100;
+    dg_struct.T2 = (msg_rec[103 + k] + msg_rec[104 + k] * 256 + msg_rec[105 + k] * 256 * 256 ) / 100;
+    dg_struct.T3 = (msg_rec[119 + k] + msg_rec[120 + k] * 256 + msg_rec[121 + k] * 256 * 256 ) / 100;
+    dg_struct.P0 = (msg_rec[167 + k] + msg_rec[168 + k] * 256 + msg_rec[169 + k] * 256 * 256 ) / 100;
+    dg_struct.P1 = (msg_rec[175 + k] + msg_rec[176 + k] * 256 + msg_rec[177 + k] * 256 * 256 ) / 100;
+    dg_struct.P2 = (msg_rec[183 + k] + msg_rec[184 + k] * 256 + msg_rec[185 + k] * 256 * 256 ) / 100;
+    dg_struct.P3 = (msg_rec[191 + k] + msg_rec[192 + k] * 256 + msg_rec[193 + k] * 256 * 256 ) / 100;
+    dg_struct.Valves = msg_rec[43 + k] - 0x60;
+    dg_struct.Dpower = 0x0f - msg_rec[46 + k];
+    printf("Anum: %d;\nPAC_num: %d;\nUnit_num: %c%c%c%c;\nSOFTdate: %c%c.%c%c.%c%c%c%c;\nPROBAtimer: %d;\nMflag: %x;\nT0: %d;\nT1: %d;\nT2: %d;\nT3: %d;\nP0: %d;\nP1: %d;\nP2: %d;\nP3: %d;\nValves: %x;\nDpower: %x;\n",
+           dg_struct.Anum, dg_struct.PAC_num, dg_struct.Unit_num[0], dg_struct.Unit_num[1], dg_struct.Unit_num[2], dg_struct.Unit_num[3], dg_struct.SOFTdata[0], dg_struct.SOFTdata[1], dg_struct.SOFTdata[2],
+           dg_struct.SOFTdata[3], dg_struct.SOFTdata[4], dg_struct.SOFTdata[5], dg_struct.SOFTdata[6], dg_struct.SOFTdata[7], dg_struct.PROBAtimer, dg_struct.Mflag, dg_struct.T0, dg_struct.T1, dg_struct.T2,
+           dg_struct.T3, dg_struct.P0, dg_struct.P1, dg_struct.P2, dg_struct.P3, dg_struct.Valves, dg_struct.Dpower);
+    printf("\n");
+    return 0;
+}
+
+
+/**
+  * @brief read data from MSU44RHTL sensor
+  * @param choose uart
+  * @param the buffer in which the data will be written
+  * @param address this sensor
+  * @retval status
+  */
+
+uint8_t rs_read_MSU44RHTL(UART_HandleTypeDef* huart, uint8_t* buf, uint8_t dev_addr){
+
+  HAL_StatusTypeDef st;
+
+  uint16_t crc_calc = 0;
+  uint8_t msg_cmd[8] = {dev_addr, 0x04, 0x00, 0x1E, 0x00, 0x0F, 0x00, 0x00};
+  uint8_t ans_cmd[35];
+
+  crc_calc = crc16(msg_cmd, 6);
+  memcpy(&msg_cmd[6], &crc_calc, sizeof(crc_calc));
+
+  int i = 0;
+  do
+  {
+    if (i > 2)
+      return 1;
+
+    RS_TR_SET(huart, true);
+    HAL_HalfDuplex_EnableTransmitter(&RS3_huart);
+    st = HAL_UART_Transmit(huart, msg_cmd, sizeof(msg_cmd), 50);
+    RS_TR_SET(huart, false);
+    HAL_HalfDuplex_EnableReceiver(&RS3_huart);
+    st = HAL_UART_Receive(huart, ans_cmd, sizeof(ans_cmd), 50);
+    i++;
+  } while (st != HAL_OK);
+
+
+  crc_calc = crc16(ans_cmd, 33);
+  if (!((ans_cmd[0] == dev_addr)
+   && (ans_cmd[1] == 0x04)
+   && (ans_cmd[33] == (uint8_t)crc_calc)
+   && (ans_cmd[34] == crc_calc >> 8)))
+    return 2;
+
+  memcpy(buf, &ans_cmd[0], 30);
+  return 0;
+}
+
+/**
+  * @brief manage power supply for wind's sensor
+  * @param turn on/off power supply
+  * @retval -
+  */
+void power_manage_ISA_LIC(bool state){
+  if(state) HAL_GPIO_WritePin(RS_48V_EN_GPIO_Port, RS_48V_EN_Pin, GPIO_PIN_RESET);
+  else HAL_GPIO_WritePin(RS_48V_EN_GPIO_Port, RS_48V_EN_Pin, GPIO_PIN_SET);
+}
+
+/**
+  * @brief read data from WIND sensor
+  * @param choose uart
+  * @param the buffer in which the data will be written
+  * @param address this sensor
+  * @retval status
+  */
+uint8_t rs_read_ISA_LIC(UART_HandleTypeDef* huart, uint8_t* buf, uint8_t dev_addr){
+  
+  HAL_StatusTypeDef st;
+
+  uint16_t crc_calc = 0;
+  uint8_t msg_cmd[8] = {dev_addr, 0x04, 0x00, 0x00, 0x00, 0x1E, 0x00, 0x00};
+  uint8_t ans_cmd[66];
+
+  crc_calc = crc16(msg_cmd, 6);
+  memcpy(&msg_cmd[6], &crc_calc, sizeof(crc_calc));
+
+  int i = 0;
+  do
+  {
+    //if (i > 2)
+      //return 1;
+
+    RS_TR_SET(huart, true);
+    //RS_TR_SET(huart, false);
+    st = HAL_UART_Transmit(huart, msg_cmd, sizeof(msg_cmd), 200);
+    //RS_TR_SET(huart, true);
+    RS_TR_SET(huart, false);
+ 
+    //st = HAL_UART_Receive(huart, Isa_LIC_struct.arr, sizeof(Isa_LIC_struct.arr), 100);
+    
+    st = HAL_UART_Receive(huart, ans_cmd, sizeof(ans_cmd), 200);
+    
+    i++;
+  } while /*(st != HAL_OK)*/ (i!=2);
+  
+  crc_calc = crc16(ans_cmd, 64);
+  
+  //crc_calc = crc16(Isa_LIC_struct.arr, 64);
+  /*
+  if (!((Isa_LIC_struct.Isa_LIC_struct.dev_addr == dev_addr)
+   && (Isa_LIC_struct.Isa_LIC_struct.func_code == 0x04)
+   && (Isa_LIC_struct.Isa_LIC_struct.crc == (uint8_t)crc_calc)))
+    return 2;
+  */
+  
+  //*(uint32_t*)&val_oxy = (uint32_t)ans_cmd[1] | (uint32_t)ans_cmd[0] << 8 | (uint32_t)ans_cmd[3] << 16 | (uint32_t)ans_cmd[2] << 24;
+  
+  
+  //float* new_arr = (float *)(ans_cmd + 2);
+  int k = 0;
+  if(ans_cmd[0] == 0) k = 1;
+  isa_lic.Self_Diagnostic = (uint32_t)ans_cmd[4+k] | (uint32_t)ans_cmd[3+k] << 8;                 
+  *(uint32_t*)&isa_lic.Long_Comp_Speed_Wind = (uint32_t)ans_cmd[6+k] << 16 | (uint32_t)ans_cmd[5+k] << 24 | (uint32_t)ans_cmd[8+k] | (uint32_t)ans_cmd[7+k] << 8;
+  *(uint32_t*)&isa_lic.Trans_Comp_Speed_Wind = (uint32_t)ans_cmd[10+k] | (uint32_t)ans_cmd[9+k] << 8 | (uint32_t)ans_cmd[12+k] << 16 | (uint32_t)ans_cmd[11+k] << 24;
+  *(uint32_t*)&isa_lic.ABS_Speed_Wind = (uint32_t)ans_cmd[14+k] | (uint32_t)ans_cmd[13+k] << 8 | (uint32_t)ans_cmd[16+k] << 16 | (uint32_t)ans_cmd[15+k] << 24;
+  *(uint32_t*)&isa_lic.Direct_Wind = (uint32_t)ans_cmd[18+k] | (uint32_t)ans_cmd[17+k] << 8 | (uint32_t)ans_cmd[20+k] << 16 | (uint32_t)ans_cmd[19+k] << 24;
+  *(uint32_t*)&isa_lic.Temp_Air = (uint32_t)ans_cmd[22+k] | (uint32_t)ans_cmd[21+k] << 8 | (uint32_t)ans_cmd[24+k] << 16 | (uint32_t)ans_cmd[23+k] << 24;
+  *(uint32_t*)&isa_lic.Atmos_Pressure_mm_hg = (uint32_t)ans_cmd[26+k] | (uint32_t)ans_cmd[25+k] << 8 | (uint32_t)ans_cmd[28+k] << 16 | (uint32_t)ans_cmd[27+k] << 24;
+  *(uint32_t*)&isa_lic.Atmos_Pressure_gPa = (uint32_t)ans_cmd[30+k] | (uint32_t)ans_cmd[29+k] << 8 | (uint32_t)ans_cmd[32+k] << 16 | (uint32_t)ans_cmd[31+k] << 24;
+  *(uint32_t*)&isa_lic.Humidity = (uint32_t)ans_cmd[34+k] | (uint32_t)ans_cmd[33+k] << 8 | (uint32_t)ans_cmd[36+k] << 16 | (uint32_t)ans_cmd[35+k] << 24;
+  *(uint32_t*)&isa_lic.Light = (uint32_t)ans_cmd[38+k] | (uint32_t)ans_cmd[37+k] << 8 | (uint32_t)ans_cmd[40+k] << 16 | (uint32_t)ans_cmd[39+k] << 24;
+  *(uint32_t*)&isa_lic.Angle_Inclination_Zenith = (uint32_t)ans_cmd[42+k] | (uint32_t)ans_cmd[41+k] << 8 | (uint32_t)ans_cmd[44+k] << 16 | (uint32_t)ans_cmd[43+k] << 24;
+  *(uint32_t*)&isa_lic.Angle_Inclination_Azimuth = (uint32_t)ans_cmd[46+k] | (uint32_t)ans_cmd[45+k] << 8 | (uint32_t)ans_cmd[48+k] << 16 | (uint32_t)ans_cmd[47+k] << 24;
+  *(uint32_t*)&isa_lic.Diret_to_North = (uint32_t)ans_cmd[50+k] | (uint32_t)ans_cmd[49+k] << 8 | (uint32_t)ans_cmd[51+k] << 16 | (uint32_t)ans_cmd[52+k] << 24;
+  *(uint32_t*)&isa_lic.Latitude = (uint32_t)ans_cmd[54+k] | (uint32_t)ans_cmd[53+k] << 8 | (uint32_t)ans_cmd[56+k] << 16 | (uint32_t)ans_cmd[55+k] << 24;
+  *(uint32_t*)&isa_lic.Longitude = (uint32_t)ans_cmd[58+k] | (uint32_t)ans_cmd[57+k] << 8 | (uint32_t)ans_cmd[60+k] << 16 | (uint32_t)ans_cmd[59+k] << 24;
+  *(uint32_t*)&isa_lic.Height = (uint32_t)ans_cmd[62+k] | (uint32_t)ans_cmd[61+k] << 8 | (uint32_t)ans_cmd[64+k] << 16 | (uint32_t)ans_cmd[63+k] << 24;
+  
+  //memcpy(buf, Isa_LIC_struct.arr, 59);
+  
+  return 0;
+}
+
+/**
+  * @brief write setting's data to WIND sensor
+  * @param choose uart
+  * @param address this sensor
+  * @param union of struct
+  * @retval status
+  */
+         
+uint8_t rs_write_settings_ISA_LIC(UART_HandleTypeDef* huart, uint8_t dev_addr, Isa_Settings isa_set){
+  
+  HAL_StatusTypeDef st;
+  
+  uint16_t crc_calc = 0;  
+  uint8_t msg_cmd[8] = {dev_addr, 0x06, 0x00, 0x01, (isa_set.parity << 1) || isa_set.stop_bits, isa_set.speed, 0x00, 0x00};
+  crc_calc = crc16(msg_cmd, 6);
+  memcpy(&msg_cmd[6], &crc_calc, sizeof(crc_calc));
+
+  int i = 0;
+  do
+  {
+    if (i > 2)
+      return 1;
+
+    //RS_TR_SET(huart, true);
+    RS_TR_SET(huart, false);
+    st = HAL_UART_Transmit(huart, msg_cmd, sizeof(msg_cmd), 100);
+    i++;
+  } while (st != HAL_OK);
+
+  return 0;
+}
+
+uint8_t rs_read_WIND(UART_HandleTypeDef* huart, uint8_t* buf){
+
+  HAL_StatusTypeDef st;
+
+  uint16_t crc_calc = 0;
+  uint8_t msg_cmd[5] = {0x05, 0x41, 0x04, 0, 0};
+  uint8_t ans_cmd[13];
+
+  crc_calc = crc16(msg_cmd, 3);
+  memcpy(&msg_cmd[3], &crc_calc, sizeof(crc_calc));
+
+  int i = 0;
+  do
+  {
+    if (i > 2)
+      return 1;
+
+    RS_TR_SET(huart, true);
+    HAL_UART_Transmit(huart, msg_cmd, sizeof(msg_cmd), 50);
+    RS_TR_SET(huart, false);
+    st = HAL_UART_Receive(huart, ans_cmd, sizeof(ans_cmd), 50);
+    i++;
+  } while (st != HAL_OK);
+
+
+  crc_calc = crc16(ans_cmd, 11);
+  if (!((ans_cmd[0] == 0x05)
+   && (ans_cmd[1] == 0x41)
+   && (ans_cmd[2] == 0x04)
+   && (ans_cmd[11] == (uint8_t)crc_calc)
+   && (ans_cmd[12] == crc_calc >> 8)))
+    return 2;
+
+  memcpy(buf, &ans_cmd[3], 8);
+  return 0;
+}
+
+/**
+  * @brief read data from OXYGEN sensor
+  * @param choose uart
+  * @param the buffer in which the data will be written
+  * @param address this sensor
+  * @retval status
+  */
+
+uint8_t rs_read_OXYGEN(UART_HandleTypeDef* huart, uint8_t* buf, uint8_t dev_addr){
+
+  HAL_StatusTypeDef st;
+
+  uint16_t crc_calc = 0;
+  uint8_t msg_cmd[8] = {dev_addr, 0x04, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00};
+  uint8_t ans_cmd[9];
+
+  crc_calc = crc16(msg_cmd, 6);
+  memcpy(&msg_cmd[6], &crc_calc, sizeof(crc_calc));
+
+  int i = 0;
+  do
+  {
+    if (i > 2)
+      return 1;
+
+    RS_TR_SET(huart, true);
+    HAL_UART_Transmit(huart, msg_cmd, sizeof(msg_cmd), 100);
+    RS_TR_SET(huart, false);
+    st = HAL_UART_Receive(huart, ans_cmd, sizeof(ans_cmd), 100);
+    i++;
+  } while (st != HAL_OK);
+
+
+  crc_calc = crc16(ans_cmd, 7);
+  if (!((ans_cmd[0] == dev_addr)
+   && (ans_cmd[1] == 0x04)
+   && (ans_cmd[7] == (uint8_t)crc_calc)
+   && (ans_cmd[8] == crc_calc >> 8)))
+    return 2;
+
+  memcpy(buf, &ans_cmd[3], 4);
+  return 0;
+}
+
+uint8_t get_sensor_data_string(uint8_t sensor_type, UART_HandleTypeDef* huart, char* buf){
+  
+  uint8_t data[40];
+  
+  float val1 = -1;
+  float val2 = -1;
+  float val3 = -1;
+  int   val4 = -1;
+  uint8_t len = 0;
+  float val_oxy = -1;
+  uint8_t rs_result = 0;
+      
+      
+  switch(sensor_type){
+    case MSU44RHTL:
+          rs_result = rs_read_MSU44RHTL(huart, data, 0x01);        // For MSU44RHTL sensor
+          break;
+    case SEROV:
+          rs_result = rs_read_WIND(huart, data);                // For Serov sensor
+          break;
+    case OXYGEN_SENS:                               // For oxygen sensor
+          rs_result = rs_read_OXYGEN(huart, data, 0x01);
+          break;
+  }
+  if (rs_result == 0)
+  {
+    switch(sensor_type){
+      case MSU44RHTL:
+        val1 = (float)(data[1]) + (float)(data[3]) * 0.1;
+        val2 = (float)(data[5]) + (float)(data[7]) * 0.1;
+        val4 = (int)(data[28] << 8) + (int)data[29];
+        len = snprintf(buf, sizeof(buf), "{\"device_id\":%lld,\"device_type\":\"sensors\",\"sensor\":\"meteo\",\"data\":{\"Temp_C\":%f,\"Humidity\":%f,\"Light\":%d}}",
+               cfg_overall.Serial_num, val1, val2, val4);
+        break;
+      case SEROV:
+        val1 = (float) ((int16_t) ((data[1] << 8) | data[0])) / 1000.0;
+        val2 = (float) ((int16_t) ((data[3] << 8) | data[2])) / 1000.0;
+        val3 = ((data[5] << 8) | data[4]) / 10.0;
+        val4 = ((data[7] & 0x07) << 8) | data[6];
+        len = snprintf(buf, sizeof(buf), "{\"device_id\":%lld,\"device_type\":\"sensors\",\"sensor\":\"wind\",\"data\":{\"WindVelocityLongitudinal_mps\":%f,\"WindVelocityCross_mps\":%f,\"Temp_C\":%f,\"Pressure_mmHg\":%d}}",
+               cfg_overall.Serial_num, val1, val2, val3, val4);
+        break;
+      case OXYGEN_SENS:
+        *(uint32_t*)&val_oxy = (uint32_t)data[1] | (uint32_t)data[0]<< 8 | (uint32_t)data[3] << 16 | (uint32_t)data[2] << 24;
+        len = snprintf(buf, sizeof(buf), "{\"device_id\":%lld,\"device_type\":\"sensors\",\"sensor\":\"oxygen\",\"data\":{\"Oxygen\":%f}}",
+               cfg_overall.Serial_num, val_oxy);
+        break;
+    }
+  }
+  else
+  if (rs_result == 1)
+    printf("RS read timeout!\n");
+  else
+  if (rs_result == 2)
+    printf("RS protocol error!\n");
+  else
+  if (rs_result == 3)
+    printf("No RS connected!\n");
+  
+  return len;
+  
+}
+
+uint8_t get_mqtt_topic(uint8_t sensor_type, UART_HandleTypeDef* huart, char* buf){
+  uint8_t len = 0;
+  char _sensor_type[32];
+  char _interface[32];
+  switch(sensor_type){
+    case MSU44RHTL:
+      sprintf(_sensor_type, "MSU44RHTL");
+      break;
+    case SEROV:
+      sprintf(_sensor_type, "WIND");
+      break;
+    case OXYGEN_SENS:                                           // For oxygen sensor
+      sprintf(_sensor_type, "OXYGEN");
+      break;
+  }
+  if(huart == &RS1_huart){
+      sprintf(_interface, "RS1");
+  }
+  else if(huart == &RS2_huart){
+      sprintf(_interface, "RS2");
+  }
+  else if(huart == &RS3_huart){
+      sprintf(_interface, "RS3");
+  }
+  
+  len = sprintf(buf, "%s%s/%s", cfg_eth.MQTT_topic_data, _interface, _sensor_type);
+  return len;
+}
+
+uint8_t MSU44RHTL_form_array(uint8_t* data, char* dataRead)
+{
+   dataRead[0] = 1;
+   dataRead[1] = data[1];
+   dataRead[2] = data[3];
+   dataRead[3] = data[5];
+   dataRead[4] = data[7];
+   dataRead[5] = data[28];
+   dataRead[6] = data[29];
+   return 7;
+}
+
+uint8_t SEROV_form_array(uint8_t *data, char *dataRead)
+{  
+   dataRead[0] = 3;
+   memcpy(dataRead + 1, data, 8);
+   return 9;
+}
+
+uint8_t OXYGEN_form_array(uint8_t *data, char *dataRead)
+{
+   float val_oxy;
+   *(uint32_t*)&val_oxy = (uint32_t)data[1] | (uint32_t)data[0] << 8 | (uint32_t)data[3] << 16 | (uint32_t)data[2] << 24;
+   val_oxy *= 100000;
+   dataRead[0] = 2;
+   *(uint32_t*)&dataRead[1] = (uint32_t)val_oxy;
+   //memcpy(dataRead + 1, &val_oxy, 4);
+   return 5;
+}
+

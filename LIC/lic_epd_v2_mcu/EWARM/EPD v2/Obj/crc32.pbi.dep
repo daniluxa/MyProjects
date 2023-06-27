@@ -1,0 +1,9 @@
+crc32.pbi: \
+  C:\Users\Daniluxa\Documents\GitHub\LIC\lic_epd_v2_mcu\Core\Src\crc32.c \
+  C:\Users\Daniluxa\Documents\GitHub\LIC\lic_epd_v2_mcu\EWARM/../Core/Inc\crc32.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\stdint.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\ycheck.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\yvals.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\DLib_Defaults.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\DLib_Config_Full.h \
+  C:\Users\Daniluxa\Practice\IAR\arm\inc\c\DLib_Product.h

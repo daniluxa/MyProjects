@@ -1,0 +1,15 @@
+"C:\Users\Daniluxa\Practice\IAR\arm\bin\armproc.dll" 
+
+"C:\Users\Daniluxa\Practice\IAR\arm\bin\armstlink2.dll" 
+
+"C:\Users\Daniluxa\Documents\GitHub\DG\EWARM\DG\Exe\DG.out" 
+
+--plugin="C:\Users\Daniluxa\Practice\IAR\arm\bin\armbat.dll" 
+
+--device_macro="C:\Users\Daniluxa\Practice\IAR\arm\config\debugger\ST\STM32F2xx.dmac" 
+
+--flash_loader="C:\Users\Daniluxa\Practice\IAR\arm\config\flashloader\ST\FlashSTM32F205xC.board" 
+
+
+
+

@@ -1,0 +1,79 @@
+Change Component Comment : Designator=G1 Old Comment=32MHz New Comment=32ֳּצ
+Change Component Comment : Designator=D1 Old Comment=AT24MAC402 SOIC-8 New Comment=AT24MAC402
+Change Component Comment : Designator=VD2 Old Comment=LED New Comment=FYLS-0805UGC
+Change Component Comment : Designator=VD1 Old Comment=LED New Comment=FYLS-0805UYC
+Change Component Comment : Designator=D3 Old Comment=PE4259 SC-70 New Comment=PE4259
+Change component parameters: Designator = "C2" ("C2"); Footprint = "ׁ0603"; UniqueID = "\JKYOQJGY" ("\JKYOQJGY")
+Change component parameters (AddParameter): Name = "Value"; Value = "0,1 לך"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "16 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C3" ("C3"); Footprint = "ׁ0603"; UniqueID = "\UNOJQSBK" ("\UNOJQSBK")
+Change component parameters (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C4" ("C4"); Footprint = "ׁ0603"; UniqueID = "\MUDNFBVE" ("\MUDNFBVE")
+Change component parameters (AddParameter): Name = "Value"; Value = "0,47 לך"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "10 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C5" ("C5"); Footprint = "ׁ0603"; UniqueID = "\BGKTTOSY" ("\BGKTTOSY")
+Change component parameters (AddParameter): Name = "Value"; Value = "1 לך"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "10 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C6" ("C6"); Footprint = "ׁ0603"; UniqueID = "\MCPUPEPQ" ("\MCPUPEPQ")
+Change component parameters (AddParameter): Name = "Value"; Value = "0,1 לך"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "16 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C7" ("C7"); Footprint = "ׁ0603"; UniqueID = "\ELWILWQV" ("\ELWILWQV")
+Change component parameters (AddParameter): Name = "Value"; Value = "0,047 לך"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "16 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C8" ("C8"); Footprint = "ׁ0603"; UniqueID = "\MISHKMKF" ("\MISHKMKF")
+Change component parameters (AddParameter): Name = "Value"; Value = "47"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C9" ("C9"); Footprint = "ׁ0603"; UniqueID = "\VWJJKEKD" ("\VWJJKEKD")
+Change component parameters (AddParameter): Name = "Value"; Value = "1,8"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C10" ("C10"); Footprint = "ׁ0603"; UniqueID = "\WCHOEELL" ("\WCHOEELL")
+Change component parameters (AddParameter): Name = "Value"; Value = "5,6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C11" ("C11"); Footprint = "ׁ0603"; UniqueID = "\PQYSIQLH" ("\PQYSIQLH")
+Change component parameters (AddParameter): Name = "Value"; Value = "3.3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C12" ("C12"); Footprint = "ׁ0603"; UniqueID = "\AMLFTUIG" ("\AMLFTUIG")
+Change component parameters (AddParameter): Name = "Value"; Value = "5,6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C13" ("C13"); Footprint = "ׁ0603"; UniqueID = "\NPUKHMEU" ("\NPUKHMEU")
+Change component parameters (AddParameter): Name = "Value"; Value = "2,4"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C14" ("C14"); Footprint = "ׁ0603"; UniqueID = "\BNMKYTSJ" ("\BNMKYTSJ")
+Change component parameters (AddParameter): Name = "Value"; Value = "39"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C15" ("C15"); Footprint = "ׁ0603"; UniqueID = "\XEKWNGYQ" ("\XEKWNGYQ")
+Change component parameters (AddParameter): Name = "Value"; Value = "2,2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C16" ("C16"); Footprint = "ׁ0603"; UniqueID = "\WRUNCJYE" ("\WRUNCJYE")
+Change component parameters (AddParameter): Name = "Value"; Value = "1000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "10 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C17" ("C17"); Footprint = "ׁ0603"; UniqueID = "\KQPPSQDF" ("\KQPPSQDF")
+Change component parameters (AddParameter): Name = "Value"; Value = "2,2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C18" ("C18"); Footprint = "ׁ0603"; UniqueID = "\YYCSULKE" ("\YYCSULKE")
+Change component parameters (AddParameter): Name = "Value"; Value = "0,1 לך"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "16 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C19" ("C19"); Footprint = "ׁ0603"; UniqueID = "\DEHTSIEJ" ("\DEHTSIEJ")
+Change component parameters (AddParameter): Name = "Value"; Value = "39"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C20" ("C20"); Footprint = "ׁ0603"; UniqueID = "\OUDSKCKP" ("\OUDSKCKP")
+Change component parameters (AddParameter): Name = "Value"; Value = "3,3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C21" ("C21"); Footprint = "ׁ0603"; UniqueID = "\UFMRRYXN" ("\UFMRRYXN")
+Change component parameters (AddParameter): Name = "Value"; Value = "3,3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50 ֲ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "L1" ("L1"); Footprint = "IND_0805"; UniqueID = "\BNOTGWSI" ("\BNOTGWSI")
+Change component parameters (AddParameter): Name = "Value"; Value = "15 לך"; VariantName = "[No Variations]"
+Change component parameters: Designator = "L2" ("L2"); Footprint = "INDC_0603"; UniqueID = "\WSIYMKUA" ("\WSIYMKUA")
+Change component parameters (AddParameter): Name = "Value"; Value = "0,047 לך"; VariantName = "[No Variations]"
+Change component parameters: Designator = "L3" ("L3"); Footprint = "INDC_0603"; UniqueID = "\SFBVBVPX" ("\SFBVBVPX")
+Change component parameters (AddParameter): Name = "Value"; Value = "15 ם"; VariantName = "[No Variations]"
+Change component parameters: Designator = "L4" ("L4"); Footprint = "INDC_0603"; UniqueID = "\RJVFVLPT" ("\RJVFVLPT")
+Change component parameters (AddParameter): Name = "Value"; Value = "2,5 ם"; VariantName = "[No Variations]"
+Change component parameters: Designator = "L5" ("L5"); Footprint = "INDC_0603"; UniqueID = "\TWBGORDD" ("\TWBGORDD")
+Change component parameters (AddParameter): Name = "Value"; Value = "4,7 ם"; VariantName = "[No Variations]"
+Change component parameters: Designator = "L6" ("L6"); Footprint = "INDC_0603"; UniqueID = "\PUMJOMRE" ("\PUMJOMRE")
+Change component parameters (AddParameter): Name = "Value"; Value = "9,1 ם"; VariantName = "[No Variations]"
+Added Room: Name=Sheet1
+Added Room: Name=Sheet2

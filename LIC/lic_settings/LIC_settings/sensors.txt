@@ -1,0 +1,92 @@
+[
+  {
+    "ID": 4,
+    "Name": "ISA",
+    "Address": 10,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 5,
+    "Name": "EKSIK_TEMP",
+    "Address": 11,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 6,
+    "Name": "EKSIK_HUM",
+    "Address": 12,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 7,
+    "Name": "EKSIK_PRES",
+    "Address": 13,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 8,
+    "Name": "EKSIK_CH4",
+    "Address": 14,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 9,
+    "Name": "EKSIK_O2",
+    "Address": 15,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 10,
+    "Name": "EKSIK_CO2",
+    "Address": 16,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 11,
+    "Name": "EKSIK_NH3",
+    "Address": 17,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 12,
+    "Name": "EKSIK_H2S",
+    "Address": 18,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 13,
+    "Name": "EKSIK_CO",
+    "Address": 19,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 14,
+    "Name": "EKSIK_NO2",
+    "Address": 20,
+    "PollPeriod": 10
+  },
+  {
+    "ID": 15,
+    "Name": "EKSIK_SO2",
+    "Address": 21,
+    "PollPeriod": 10
+  },	
+  {
+    "ID": 16,
+    "Name": "EKSIK_LIGHT",
+    "Address": 22,
+    "PollPeriod": 10
+  },	  
+  {
+    "ID": 17,
+    "Name": "EKSIK_DUST_PM25",
+    "Address": 23,
+    "PollPeriod": 10
+  },	
+  {
+    "ID": 18,
+    "Name": "EKSIK_DUST_PM10",
+    "Address": 23,
+    "PollPeriod": 10
+  }	
+]

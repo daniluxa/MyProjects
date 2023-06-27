@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIC_settings", "LIC_settings.csproj", "{7D5D4821-60D3-4BE1-9F11-FE2ECF2A88C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{42F4868B-A6CE-4FC5-98C8-BB86A98C6995}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		NoBorder|Any CPU = NoBorder|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D5D4821-60D3-4BE1-9F11-FE2ECF2A88C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5D4821-60D3-4BE1-9F11-FE2ECF2A88C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5D4821-60D3-4BE1-9F11-FE2ECF2A88C9}.NoBorder|Any CPU.ActiveCfg = NoBorder|Any CPU
+		{7D5D4821-60D3-4BE1-9F11-FE2ECF2A88C9}.NoBorder|Any CPU.Build.0 = NoBorder|Any CPU
+		{7D5D4821-60D3-4BE1-9F11-FE2ECF2A88C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5D4821-60D3-4BE1-9F11-FE2ECF2A88C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {407582CA-20C1-48FA-8122-62BC97B27CC1}
+	EndGlobalSection
+EndGlobal

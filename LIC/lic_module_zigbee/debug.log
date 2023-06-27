@@ -1,0 +1,82 @@
+[0425/152533:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'prefetch-src'.
+", source: https://www.altium.com/ad-start/ (0)
+[0425/152533:INFO:CONSOLE(0)] "The source list for Content Security Policy directive 'script-src' contains an invalid source: ''report-sample''. It will be ignored.", source: https://www.altium.com/ad-start/ (0)
+[0425/152533:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'worker-src'.
+", source: https://www.altium.com/ad-start/ (0)
+[0425/152534:INFO:CONSOLE(0)] "Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.", source:  (0)
+[0425/152534:INFO:CONSOLE(0)] "Setting 'XMLHttpRequest.withCredentials' for synchronous requests is deprecated.", source:  (0)
+[0425/152535:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'prefetch-src'.
+", source: about:blank (0)
+[0425/152535:INFO:CONSOLE(0)] "The source list for Content Security Policy directive 'script-src' contains an invalid source: ''report-sample''. It will be ignored.", source: about:blank (0)
+[0425/152535:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'worker-src'.
+", source: about:blank (0)
+[0425/152535:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/152535:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/152535:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/152535:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected identifier", source: https://profile.altium.com/user-info-injectable-to-header/index.js (1)
+[0425/152535:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/152535:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/152535:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/152535:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'prefetch-src'.
+", source: about:blank (0)
+[0425/152535:INFO:CONSOLE(0)] "The source list for Content Security Policy directive 'script-src' contains an invalid source: ''report-sample''. It will be ignored.", source: about:blank (0)
+[0425/152535:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'worker-src'.
+", source: about:blank (0)
+[0425/152535:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'prefetch-src'.
+", source: about:blank (0)
+[0425/152535:INFO:CONSOLE(0)] "The source list for Content Security Policy directive 'script-src' contains an invalid source: ''report-sample''. It will be ignored.", source: about:blank (0)
+[0425/152535:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'worker-src'.
+", source: about:blank (0)
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/152536:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160612:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'prefetch-src'.
+", source: https://www.altium.com/ad-start/ (0)
+[0425/160612:INFO:CONSOLE(0)] "The source list for Content Security Policy directive 'script-src' contains an invalid source: ''report-sample''. It will be ignored.", source: https://www.altium.com/ad-start/ (0)
+[0425/160612:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'worker-src'.
+", source: https://www.altium.com/ad-start/ (0)
+[0425/160613:INFO:CONSOLE(0)] "Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.", source:  (0)
+[0425/160613:INFO:CONSOLE(0)] "Setting 'XMLHttpRequest.withCredentials' for synchronous requests is deprecated.", source:  (0)
+[0425/160614:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/160614:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/160614:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/160614:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'prefetch-src'.
+", source: about:blank (0)
+[0425/160614:INFO:CONSOLE(0)] "The source list for Content Security Policy directive 'script-src' contains an invalid source: ''report-sample''. It will be ignored.", source: about:blank (0)
+[0425/160614:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'worker-src'.
+", source: about:blank (0)
+[0425/160614:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/160614:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/160614:INFO:CONSOLE(0)] "Redirect at origin 'https://cdn-static.altium.com' has been blocked from loading by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://www.altium.com' is therefore not allowed access.", source: https://www.altium.com/ad-start/ (0)
+[0425/160614:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected identifier", source: https://profile.altium.com/user-info-injectable-to-header/index.js (1)
+[0425/160614:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'prefetch-src'.
+", source: about:blank (0)
+[0425/160614:INFO:CONSOLE(0)] "The source list for Content Security Policy directive 'script-src' contains an invalid source: ''report-sample''. It will be ignored.", source: about:blank (0)
+[0425/160614:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'worker-src'.
+", source: about:blank (0)
+[0425/160614:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'prefetch-src'.
+", source: about:blank (0)
+[0425/160614:INFO:CONSOLE(0)] "The source list for Content Security Policy directive 'script-src' contains an invalid source: ''report-sample''. It will be ignored.", source: about:blank (0)
+[0425/160614:INFO:CONSOLE(0)] "Unrecognized Content-Security-Policy directive 'worker-src'.
+", source: about:blank (0)
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101
+[0425/160615:ERROR:ssl_client_socket_openssl.cc(1132)] handshake failed; returned -1, SSL error code 1, net_error -101

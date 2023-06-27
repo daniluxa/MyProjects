@@ -1,0 +1,15 @@
+"C:\Users\Daniluxa\Practice\IAR\arm\bin\armproc.dll" 
+
+"C:\Users\Daniluxa\Practice\IAR\arm\bin\armstlink2.dll" 
+
+"C:\Users\Daniluxa\Documents\GitHub\LIC\lic_epd_v2_mcu\EWARM\Release\Exe\EPD v2.out" 
+
+--plugin="C:\Users\Daniluxa\Practice\IAR\arm\bin\armbat.dll" 
+
+--device_macro="C:\Users\Daniluxa\Practice\IAR\arm\config\debugger\ST\STM32F4xx.dmac" 
+
+--flash_loader="C:\Users\Daniluxa\Practice\IAR\arm\config\flashloader\ST\FlashSTM32F4xxx.board" 
+
+
+
+
